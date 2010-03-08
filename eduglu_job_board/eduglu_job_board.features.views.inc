@@ -3,12 +3,12 @@
 /**
  * Helper to implementation of hook_views_default_views().
  */
-function _eduglue_job_board_views_default_views() {
+function _eduglu_job_board_views_default_views() {
   $views = array();
 
-  // Exported view: eduglue_job_board
+  // Exported view: eduglu_job_board
   $view = new view;
-  $view->name = 'eduglue_job_board';
+  $view->name = 'eduglu_job_board';
   $view->description = 'View to show job postings in a space';
   $view->tag = 'spaces';
   $view->view_php = '';

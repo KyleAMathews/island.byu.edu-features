@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_node_info().
  */
-function _eduglue_book_node_info() {
+function _eduglu_book_node_info() {
   $items = array(
     'book' => array(
       'name' => t('Book page'),

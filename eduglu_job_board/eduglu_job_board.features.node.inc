@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_node_info().
  */
-function _eduglue_job_board_node_info() {
+function _eduglu_job_board_node_info() {
   $items = array(
     'job_form' => array(
       'name' => t('Job Posting'),

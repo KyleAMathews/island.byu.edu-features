@@ -3,14 +3,14 @@
 /**
  * Helper to implementation of hook_views_default_views().
  */
-function _eduglue_book_views_default_views() {
+function _eduglu_book_views_default_views() {
   $views = array();
 
-  // Exported view: eduglue_book
+  // Exported view: eduglu_book
   $view = new view;
-  $view->name = 'eduglue_book';
-  $view->description = 'Eduglue > Book';
-  $view->tag = 'eduglue';
+  $view->name = 'eduglu_book';
+  $view->description = 'Eduglu > Book';
+  $view->tag = 'eduglu';
   $view->view_php = '';
   $view->base_table = 'node';
   $view->is_cacheable = FALSE;
@@ -241,7 +241,7 @@ function _eduglue_book_views_default_views() {
   ));
   $handler->override_option('access', array(
     'type' => 'spaces_feature',
-    'spaces_feature' => 'eduglue_book',
+    'spaces_feature' => 'eduglu_book',
   ));
   $handler->override_option('cache', array(
     'type' => 'none',

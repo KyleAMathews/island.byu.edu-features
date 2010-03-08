@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_views_default_views().
  */
-function _eduglue_career_group_views_default_views() {
+function _eduglu_career_group_views_default_views() {
   $views = array();
 
   // Exported view: alumni_profile

@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_context_default_contexts().
  */
-function _eduglue_book_context_default_contexts() {
+function _eduglu_book_context_default_contexts() {
   $items = array();
 
   $items[] = array(
@@ -15,7 +15,7 @@ function _eduglue_book_context_default_contexts() {
       '0' => 'book',
     ),
     'views' => array(
-      '0' => 'eduglue_book',
+      '0' => 'eduglu_book',
     ),
     'menu' => 'documents',
     'block' => array(
@@ -28,13 +28,13 @@ function _eduglue_book_context_default_contexts() {
         'label' => 'Diff: inline diff revisions',
         'type' => 'context_ui',
       ),
-      'eduglue_book' => array(
-        'module' => 'eduglue',
+      'eduglu_book' => array(
+        'module' => 'eduglu',
         'delta' => 'book',
         'weight' => -40,
         'region' => 'right',
         'status' => '0',
-        'label' => 'Eduglue: Book',
+        'label' => 'Eduglu: Book',
         'type' => 'context_ui',
       ),
     ),
@@ -45,7 +45,7 @@ function _eduglue_book_context_default_contexts() {
 /**
  * Helper to implementation of hook_menu_default_items().
  */
-function _eduglue_book_menu_default_items() {
+function _eduglu_book_menu_default_items() {
   $items = array();
 
   $items[] = array(
@@ -67,7 +67,7 @@ function _eduglue_book_menu_default_items() {
 /**
  * Helper to implementation of hook_user_default_permissions().
  */
-function _eduglue_book_user_default_permissions() {
+function _eduglu_book_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: add content to books

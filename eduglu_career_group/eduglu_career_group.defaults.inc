@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_content_default_fields().
  */
-function _eduglue_career_group_content_default_fields() {
+function _eduglu_career_group_content_default_fields() {
   $fields = array();
 
   // Exported field: field_alumni_bachelor_year
@@ -1437,7 +1437,7 @@ function _eduglue_career_group_content_default_fields() {
 /**
  * Helper to implementation of hook_menu_default_items().
  */
-function _eduglue_career_group_menu_default_items() {
+function _eduglu_career_group_menu_default_items() {
   $items = array();
 
   $items[] = array(

@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_node_info().
  */
-function _eduglue_career_group_node_info() {
+function _eduglu_career_group_node_info() {
   $items = array(
     'alumni_profile' => array(
       'name' => t('Alumni Profile'),

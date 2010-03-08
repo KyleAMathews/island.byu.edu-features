@@ -3,7 +3,7 @@
 /**
  * Helper to implementation of hook_content_default_fields().
  */
-function _eduglue_job_board_content_default_fields() {
+function _eduglu_job_board_content_default_fields() {
   $fields = array();
 
   // Exported field: field_company
@@ -180,7 +180,7 @@ function _eduglue_job_board_content_default_fields() {
 /**
  * Helper to implementation of hook_context_default_contexts().
  */
-function _eduglue_job_board_context_default_contexts() {
+function _eduglu_job_board_context_default_contexts() {
   $items = array();
 
   $items[] = array(
@@ -192,7 +192,7 @@ function _eduglue_job_board_context_default_contexts() {
       '0' => 'job_form',
     ),
     'views' => array(
-      '0' => 'eduglue_job_board',
+      '0' => 'eduglu_job_board',
     ),
     'menu' => 'job-postings',
     'block' => array(),
@@ -203,7 +203,7 @@ function _eduglue_job_board_context_default_contexts() {
 /**
  * Helper to implementation of hook_menu_default_items().
  */
-function _eduglue_job_board_menu_default_items() {
+function _eduglu_job_board_menu_default_items() {
   $items = array();
 
   $items[] = array(
