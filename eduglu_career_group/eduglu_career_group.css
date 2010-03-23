@@ -4,6 +4,10 @@
   border: 5px 0 5px 0 dashed black;
   /* TODO increase size of fonts in preview, figure out what other info to add to the display Add + test jcrop module*/
 }
+  .alumni-profile-node legend {
+  font-size: 150%;
+  font-style: bold;
+ }
 .views-exposed-form input.form-text {
   width: 190px;
 }
@@ -37,7 +41,7 @@
   color:#565656;
   cursor:pointer;
   padding:5px 10px 6px 7px; /* Links */
-                              
+
   text-align: center;
 
 }
