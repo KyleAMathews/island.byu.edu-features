@@ -65,7 +65,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Year graduated with bachelors degree?',
-      'weight' => '63',
+      'weight' => '13',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -131,7 +131,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Classes that really helped me prepare for my career?',
-      'weight' => '66',
+      'weight' => '14',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -197,7 +197,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Classes I wish I\'d taken?',
-      'weight' => '67',
+      'weight' => '15',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -263,7 +263,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Company',
-      'weight' => '53',
+      'weight' => '4',
       'description' => 'Enter the name of your current employer',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -329,7 +329,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'What experiences prepared me most for my career?',
-      'weight' => '60',
+      'weight' => '10',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -395,7 +395,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Graduate studies',
-      'weight' => '64',
+      'weight' => '16',
       'description' => 'If applicable, enter the name of your terminal degree (masters of doctorate).',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -461,7 +461,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Year graduated with terminal graduate degree?',
-      'weight' => '65',
+      'weight' => '17',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -527,7 +527,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'What influenced my career choices/path?',
-      'weight' => '59',
+      'weight' => '9',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -593,7 +593,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Skills needed in my profession?',
-      'weight' => '55',
+      'weight' => '7',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -659,7 +659,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Job Title',
-      'weight' => '52',
+      'weight' => '3',
       'description' => 'Current job title',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -725,7 +725,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Location',
-      'weight' => '57',
+      'weight' => '25',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -791,7 +791,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Name (first and last)',
-      'weight' => '55',
+      'weight' => '24',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -857,7 +857,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Jobs I had before this one?',
-      'weight' => '61',
+      'weight' => '11',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -923,7 +923,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Personal Interests',
-      'weight' => '59',
+      'weight' => '27',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -997,7 +997,7 @@ function _eduglu_career_group_content_default_fields() {
       'enforce_ratio' => 1,
       'croparea' => '500x500',
       'label' => 'Picture',
-      'weight' => '56',
+      'weight' => '-4',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -1063,7 +1063,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Personal qualities needed in my profession?',
-      'weight' => '56',
+      'weight' => '8',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1129,7 +1129,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Typical salary ranges:  starting? midcareer?',
-      'weight' => '58',
+      'weight' => '8',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1195,7 +1195,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Undergraduate major',
-      'weight' => '62',
+      'weight' => '12',
       'description' => '',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -1267,7 +1267,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Website',
-      'weight' => '58',
+      'weight' => '26',
       'description' => '',
       'type' => 'link',
       'module' => 'link',
@@ -1333,7 +1333,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'What I do',
-      'weight' => '54',
+      'weight' => '5',
       'description' => 'Describe briefly what you do in your job.',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1399,7 +1399,7 @@ function _eduglu_career_group_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'What I like about my profession?',
-      'weight' => '57',
+      'weight' => '6',
       'description' => '',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -1435,6 +1435,224 @@ function _eduglu_career_group_content_default_fields() {
 }
 
 /**
+ * Helper to implementation of hook_ctools_plugin_api().
+ */
+function _eduglu_career_group_ctools_plugin_api() {
+  $args = func_get_args();
+  $module = array_shift($args);
+  $api = array_shift($args);
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => 1);
+  }
+}
+
+/**
+ * Helper to implementation of hook_fieldgroup_default_groups().
+ */
+function _eduglu_career_group_fieldgroup_default_groups() {
+  $groups = array();
+
+  // Exported group: group_alumni_about_me
+  $groups[] = array(
+    'type_name' => 'alumni_profile',
+    'group_name' => 'group_alumni_about_me',
+    'label' => 'About Me',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '-3',
+    'group_type' => 'standard',
+    'fields' => array(
+      '0' => 'field_alumni_name',
+      '1' => 'field_alumni_location',
+      '2' => 'field_alumni_website',
+      '3' => 'field_alumni_personal_interests',
+    ),
+  );
+
+  // Exported group: group_alumni_about_my_job
+  $groups[] = array(
+    'type_name' => 'alumni_profile',
+    'group_name' => 'group_alumni_about_my_job',
+    'label' => 'About My Job',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '-2',
+    'group_type' => 'standard',
+    'fields' => array(
+      '0' => 'field_alumni_job_title',
+      '1' => 'field_alumni_company',
+      '2' => 'field_alumni_what_i_do',
+      '3' => 'field_alumni_what_i_like',
+      '4' => 'field_alumni_job_skills',
+      '5' => 'field_alumni_salary',
+    ),
+  );
+
+  // Exported group: group_alumni_preparations
+  $groups[] = array(
+    'type_name' => 'alumni_profile',
+    'group_name' => 'group_alumni_preparations',
+    'label' => 'Preparations',
+    'settings' => array(
+      'form' => array(
+        'style' => 'fieldset',
+        'description' => '',
+      ),
+      'display' => array(
+        'description' => '',
+        'label' => 'above',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+      ),
+    ),
+    'weight' => '-1',
+    'group_type' => 'standard',
+    'fields' => array(
+      '0' => 'field_alumni_qualities',
+      '1' => 'field_alumni_influence',
+      '2' => 'field_alumni_experiences',
+      '3' => 'field_alumni_old_jobs',
+      '4' => 'field_alumni_undergraduate_degre',
+      '5' => 'field_alumni_bachelor_year',
+      '6' => 'field_alumni_classes_helpful',
+      '7' => 'field_alumni_classes_wish_taken',
+      '8' => 'field_alumni_graduate_degree',
+      '9' => 'field_alumni_graduate_year',
+    ),
+  );
+
+  // Translatables
+  array(
+    t('About Me'),
+    t('About My Job'),
+    t('Preparations'),
+  );
+
+  return $groups;
+}
+
+/**
+ * Helper to implementation of hook_imagecache_default_presets().
+ */
+function _eduglu_career_group_imagecache_default_presets() {
+  $items = array(
+    'alumni_profile_picture' => array(
+      'presetname' => 'alumni_profile_picture',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '124',
+            'height' => '200',
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Helper to implementation of hook_menu_default_items().
  */
 function _eduglu_career_group_menu_default_items() {
@@ -1454,4 +1672,412 @@ function _eduglu_career_group_menu_default_items() {
 
 
   return $items;
+}
+
+/**
+ * Helper to implementation of hook_user_default_permissions().
+ */
+function _eduglu_career_group_user_default_permissions() {
+  $permissions = array();
+
+  // Exported permission: edit field_about_me
+  $permissions[] = array(
+    'name' => 'edit field_about_me',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_alumni_bachelor_year
+  $permissions[] = array(
+    'name' => 'edit field_alumni_bachelor_year',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_classes_helpful
+  $permissions[] = array(
+    'name' => 'edit field_alumni_classes_helpful',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_classes_wish_taken
+  $permissions[] = array(
+    'name' => 'edit field_alumni_classes_wish_taken',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_company
+  $permissions[] = array(
+    'name' => 'edit field_alumni_company',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_experiences
+  $permissions[] = array(
+    'name' => 'edit field_alumni_experiences',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_graduate_degree
+  $permissions[] = array(
+    'name' => 'edit field_alumni_graduate_degree',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_graduate_year
+  $permissions[] = array(
+    'name' => 'edit field_alumni_graduate_year',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_influence
+  $permissions[] = array(
+    'name' => 'edit field_alumni_influence',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_job_skills
+  $permissions[] = array(
+    'name' => 'edit field_alumni_job_skills',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_job_title
+  $permissions[] = array(
+    'name' => 'edit field_alumni_job_title',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_location
+  $permissions[] = array(
+    'name' => 'edit field_alumni_location',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_name
+  $permissions[] = array(
+    'name' => 'edit field_alumni_name',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_old_jobs
+  $permissions[] = array(
+    'name' => 'edit field_alumni_old_jobs',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_personal_interests
+  $permissions[] = array(
+    'name' => 'edit field_alumni_personal_interests',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_picture
+  $permissions[] = array(
+    'name' => 'edit field_alumni_picture',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_qualities
+  $permissions[] = array(
+    'name' => 'edit field_alumni_qualities',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_salary
+  $permissions[] = array(
+    'name' => 'edit field_alumni_salary',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_undergraduate_degre
+  $permissions[] = array(
+    'name' => 'edit field_alumni_undergraduate_degre',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_website
+  $permissions[] = array(
+    'name' => 'edit field_alumni_website',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_what_i_do
+  $permissions[] = array(
+    'name' => 'edit field_alumni_what_i_do',
+    'roles' => array(),
+  );
+
+  // Exported permission: edit field_alumni_what_i_like
+  $permissions[] = array(
+    'name' => 'edit field_alumni_what_i_like',
+    'roles' => array(),
+  );
+
+  // Exported permission: view field_about_me
+  $permissions[] = array(
+    'name' => 'view field_about_me',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_bachelor_year
+  $permissions[] = array(
+    'name' => 'view field_alumni_bachelor_year',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_classes_helpful
+  $permissions[] = array(
+    'name' => 'view field_alumni_classes_helpful',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_classes_wish_taken
+  $permissions[] = array(
+    'name' => 'view field_alumni_classes_wish_taken',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_company
+  $permissions[] = array(
+    'name' => 'view field_alumni_company',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_experiences
+  $permissions[] = array(
+    'name' => 'view field_alumni_experiences',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_graduate_degree
+  $permissions[] = array(
+    'name' => 'view field_alumni_graduate_degree',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_graduate_year
+  $permissions[] = array(
+    'name' => 'view field_alumni_graduate_year',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_influence
+  $permissions[] = array(
+    'name' => 'view field_alumni_influence',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_job_skills
+  $permissions[] = array(
+    'name' => 'view field_alumni_job_skills',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_job_title
+  $permissions[] = array(
+    'name' => 'view field_alumni_job_title',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_location
+  $permissions[] = array(
+    'name' => 'view field_alumni_location',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_name
+  $permissions[] = array(
+    'name' => 'view field_alumni_name',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_old_jobs
+  $permissions[] = array(
+    'name' => 'view field_alumni_old_jobs',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_personal_interests
+  $permissions[] = array(
+    'name' => 'view field_alumni_personal_interests',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_picture
+  $permissions[] = array(
+    'name' => 'view field_alumni_picture',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_qualities
+  $permissions[] = array(
+    'name' => 'view field_alumni_qualities',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_undergraduate_degre
+  $permissions[] = array(
+    'name' => 'view field_alumni_undergraduate_degre',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_website
+  $permissions[] = array(
+    'name' => 'view field_alumni_website',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_what_i_do
+  $permissions[] = array(
+    'name' => 'view field_alumni_what_i_do',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_alumni_what_i_like
+  $permissions[] = array(
+    'name' => 'view field_alumni_what_i_like',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  return $permissions;
+}
+
+/**
+ * Helper to implementation of hook_strongarm().
+ */
+function _eduglu_career_group_strongarm() {
+  $export = array();
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_alumni_profile';
+  $strongarm->value = '0';
+
+  $export['comment_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_alumni_profile';
+  $strongarm->value = 0;
+
+  $export['comment_anonymous_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_controls_alumni_profile';
+  $strongarm->value = '3';
+
+  $export['comment_controls_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_mode_alumni_profile';
+  $strongarm->value = '4';
+
+  $export['comment_default_mode_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_order_alumni_profile';
+  $strongarm->value = '1';
+
+  $export['comment_default_order_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_default_per_page_alumni_profile';
+  $strongarm->value = '50';
+
+  $export['comment_default_per_page_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_form_location_alumni_profile';
+  $strongarm->value = '0';
+
+  $export['comment_form_location_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_preview_alumni_profile';
+  $strongarm->value = '1';
+
+  $export['comment_preview_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_alumni_profile';
+  $strongarm->value = '1';
+
+  $export['comment_subject_field_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_upload_images_alumni_profile';
+  $strongarm->value = 'none';
+
+  $export['comment_upload_images_alumni_profile'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_alumni_profile';
+  $strongarm->value = array(
+    'title' => '-5',
+    'revision_information' => '3',
+    'comment_settings' => '6',
+    'menu' => '0',
+    'book' => '2',
+    'path' => '4',
+    'attachments' => '5',
+    'og_nodeapi' => '1',
+  );
+
+  $export['content_extra_weights_alumni_profile'] = $strongarm;
+  return $export;
 }
