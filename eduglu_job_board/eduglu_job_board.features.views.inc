@@ -324,7 +324,8 @@ function _eduglu_job_board_views_default_views() {
     ),
   ));
   $handler->override_option('access', array(
-    'type' => 'none',
+    'type' => 'spaces_feature',
+    'spaces_feature' => 'eduglu_job_board',
   ));
   $handler->override_option('cache', array(
     'type' => 'none',
@@ -405,6 +406,7 @@ function _eduglu_job_board_views_default_views() {
     'title' => '',
     'description' => '',
     'weight' => 0,
+    'name' => 'navigation',
   ));
   $handler->override_option('displays', array(
     'default' => 0,
@@ -424,6 +426,7 @@ function _eduglu_job_board_views_default_views() {
     'title' => '',
     'description' => '',
     'weight' => 0,
+    'name' => 'navigation',
   ));
 
   $views[$view->name] = $view;

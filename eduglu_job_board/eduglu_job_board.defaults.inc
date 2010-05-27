@@ -35,8 +35,9 @@ function _eduglu_job_board_content_default_fields() {
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => NULL,
-      'default_value_php' => '',
+      'default_value_php' => NULL,
       'rows' => '1',
+      'size' => 60,
       'label' => 'Company',
       'weight' => '-4',
       'description' => 'Your company name',
@@ -78,8 +79,9 @@ function _eduglu_job_board_content_default_fields() {
           'value' => '',
         ),
       ),
-      'default_value_php' => '',
+      'default_value_php' => NULL,
       'rows' => '1',
+      'size' => 60,
       'label' => 'Contact Email',
       'weight' => '-3',
       'description' => 'Your email address',
@@ -117,8 +119,9 @@ function _eduglu_job_board_content_default_fields() {
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => NULL,
-      'default_value_php' => '',
+      'default_value_php' => NULL,
       'rows' => '1',
+      'size' => 60,
       'label' => 'Contact Name',
       'weight' => '-4',
       'description' => 'Your name',
@@ -156,8 +159,9 @@ function _eduglu_job_board_content_default_fields() {
     'allowed_values_php' => '',
     'widget' => array(
       'default_value' => NULL,
-      'default_value_php' => '',
+      'default_value_php' => NULL,
       'rows' => '1',
+      'size' => 60,
       'label' => 'Contact Phone Number',
       'weight' => '-3',
       'description' => 'Your phone number',
@@ -181,23 +185,38 @@ function _eduglu_job_board_content_default_fields() {
  * Helper to implementation of hook_context_default_contexts().
  */
 function _eduglu_job_board_context_default_contexts() {
-  $items = array();
-
-  $items[] = array(
-    'namespace' => 'spaces',
-    'attribute' => 'feature',
-    'value' => 'job',
-    'description' => 'context for space jobs feature',
+  $export = array();
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'spaces-feature-job';
+  $context->description = 'context for space jobs feature';
+  $context->tag = '';
+  $context->conditions = array(
     'node' => array(
-      '0' => 'job_form',
+      'values' => array(
+        '0' => 'job_form',
+      ),
+      'options' => array(),
     ),
     'views' => array(
-      '0' => 'eduglu_job_board',
+      'values' => array(
+        '0' => 'eduglu_job_board',
+      ),
+      'options' => array(),
     ),
-    'menu' => 'job-postings',
-    'block' => array(),
   );
-  return $items;
+  $context->reactions = array(
+    'menu' => 'job-postings',
+  );
+  $context->condition_mode = 0;
+
+  $translatables['spaces-feature-job'] = array(
+    t('context for space jobs feature'),
+  );
+
+  $export['spaces-feature-job'] = $context;
+  return $export;
 }
 
 /**
@@ -207,7 +226,10 @@ function _eduglu_job_board_ctools_plugin_api() {
   $args = func_get_args();
   $module = array_shift($args);
   $api = array_shift($args);
-  if ($module == "strongarm" && $api == "strongarm") {
+  if ($module == "context" && $api == "context") {
+    return array("version" => 3);
+  }
+  else if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
 }
@@ -230,8 +252,34 @@ function _eduglu_job_board_fieldgroup_default_groups() {
       ),
       'display' => array(
         'description' => '',
-        'teaser' => NULL,
-        'full' => NULL,
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'teaser' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '4' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '2' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        '3' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'token' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'label' => NULL,
       ),
     ),
