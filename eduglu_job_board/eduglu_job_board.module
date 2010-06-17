@@ -1,3 +1,27 @@
 <?php
 
 include_once('eduglu_job_board.features.inc');
+// TODO write script to convert taxonomy data over + add variable_set in hook_cron?
+
+/**
+ * Implementation of hook_cron().
+ *
+ * Set variable to tell vertical tabs not to tabify our cck fields + taxonomy
+ */
+function eduglu_job_board_cron() {
+  $var = variable_get('vertical_tabs_forms', array());
+  $var['job_form_node_form'] = array(
+    'menu' => menu,
+    'og_nodeapi' => og_nodeapi,
+    'book' => book,
+    'revision_information' => revision_information,
+    'author' => author,
+    'options' => options,
+    'comment_settings' => comment_settings,
+    'path' => path,
+    'attachments' => attachments,
+    'taxonomy' => 0,
+    'group_job_contact_fields' => 0,
+  );
+  variable_set('vertical_tabs_forms', $var);
+}

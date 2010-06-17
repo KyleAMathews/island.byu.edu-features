@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Convert job type data from taxonomy to our content type.
+ */
+function eduglu_job_board_update_6000() {
+  $result = db_query("SELECT nid, tid
+                      FROM {term_node}
+                      WHERE tid IN
+                        (SELECT tid
+                        FROM {term_data}
+                        WHERE vid = 3)");
+
+  $data = array();
+  $counter = 1;
+  while ($info = db_fetch_array($result)) {
+    $data[$counter]['nid'] = $info['nid'];
+    $data[$counter]['tid'] = $info['tid'];
+    $counter++;
+  }
+
+  foreach ($data as $datum) {
+    $str = "";
+    switch($datum['tid']) {
+      case 15:
+        $str = "FT-New";
+        break;
+      case 16:
+        $str = "FT-Alum";
+        break;
+      case 18:
+        $str = "Internship";
+        break;
+      case 14:
+        $str = "PT-School";
+        break;
+      case 17:
+        $str = "temp_consulting";
+        break;
+    }
+    
+    db_query("UPDATE {content_type_job_form}
+              SET field_eduglu_job_job_type_value = '%s'
+              WHERE nid = %d", $str, $datum['nid']);
+  }
+}

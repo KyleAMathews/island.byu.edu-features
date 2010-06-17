@@ -11,14 +11,16 @@ function _eduglu_job_board_content_default_fields() {
     'field_name' => 'field_company',
     'type_name' => 'job_form',
     'display_settings' => array(
+      'weight' => '33',
+      'parent' => 'group_job_contact_fields',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
-      'full' => array(
+      'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'teaser' => array(
+      'full' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -39,7 +41,7 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Company',
-      'weight' => '-4',
+      'weight' => '33',
       'description' => 'Your company name',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -51,14 +53,16 @@ function _eduglu_job_board_content_default_fields() {
     'field_name' => 'field_contact_email',
     'type_name' => 'job_form',
     'display_settings' => array(
+      'weight' => '35',
+      'parent' => 'group_job_contact_fields',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
-      'full' => array(
+      'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'teaser' => array(
+      'full' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -69,7 +73,7 @@ function _eduglu_job_board_content_default_fields() {
     'multiple' => '0',
     'module' => 'text',
     'active' => '1',
-    'text_processing' => '1',
+    'text_processing' => '0',
     'max_length' => '',
     'allowed_values' => '',
     'allowed_values_php' => '',
@@ -77,13 +81,15 @@ function _eduglu_job_board_content_default_fields() {
       'default_value' => array(
         '0' => array(
           'value' => '',
+          'format' => '1',
+          '_error_element' => 'default_value_widget][field_contact_email][0][value',
         ),
       ),
       'default_value_php' => NULL,
       'rows' => '1',
-      'size' => 60,
+      'size' => '60',
       'label' => 'Contact Email',
-      'weight' => '-3',
+      'weight' => '35',
       'description' => 'Your email address',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -95,14 +101,16 @@ function _eduglu_job_board_content_default_fields() {
     'field_name' => 'field_contact_name',
     'type_name' => 'job_form',
     'display_settings' => array(
+      'weight' => '32',
+      'parent' => 'group_job_contact_fields',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
-      'full' => array(
+      'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'teaser' => array(
+      'full' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -123,7 +131,7 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Contact Name',
-      'weight' => '-4',
+      'weight' => '32',
       'description' => 'Your name',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -135,14 +143,16 @@ function _eduglu_job_board_content_default_fields() {
     'field_name' => 'field_contact_phone_number',
     'type_name' => 'job_form',
     'display_settings' => array(
+      'weight' => '34',
+      'parent' => 'group_job_contact_fields',
       'label' => array(
-        'format' => 'above',
+        'format' => 'inline',
       ),
-      'full' => array(
+      'teaser' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
-      'teaser' => array(
+      'full' => array(
         'format' => 'default',
         'exclude' => 0,
       ),
@@ -163,10 +173,79 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Contact Phone Number',
-      'weight' => '-3',
+      'weight' => '34',
       'description' => 'Your phone number',
       'type' => 'text_textfield',
       'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_eduglu_job_job_type
+  $fields[] = array(
+    'field_name' => 'field_eduglu_job_job_type',
+    'type_name' => 'job_form',
+    'display_settings' => array(
+      'weight' => '31',
+      'parent' => 'group_job_contact_fields',
+      'label' => array(
+        'format' => 'inline',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '1',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'FT-Alum|Full-time (Experienced Alumni)
+FT-New|Full-time (New Graduate)
+Internship
+PT-School|Part-time In-School
+temp_consulting|Temporary Consulting
+',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Job Type',
+      'weight' => '31',
+      'description' => '',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
     ),
   );
 
@@ -176,6 +255,7 @@ function _eduglu_job_board_content_default_fields() {
     t('Contact Email'),
     t('Contact Name'),
     t('Contact Phone Number'),
+    t('Job Type'),
   );
 
   return $fields;
@@ -229,7 +309,7 @@ function _eduglu_job_board_ctools_plugin_api() {
   if ($module == "context" && $api == "context") {
     return array("version" => 3);
   }
-  else if ($module == "strongarm" && $api == "strongarm") {
+  elseif ($module == "strongarm" && $api == "strongarm") {
     return array("version" => 1);
   }
 }
@@ -251,16 +331,18 @@ function _eduglu_job_board_fieldgroup_default_groups() {
         'description' => '',
       ),
       'display' => array(
-        'description' => '',
-        '5' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
+        'weight' => '-1',
+        'label' => 'hidden',
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
+        'description' => '',
+        '5' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
@@ -280,16 +362,16 @@ function _eduglu_job_board_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
-        'label' => NULL,
       ),
     ),
     'weight' => '-1',
     'group_type' => 'standard',
     'fields' => array(
-      '0' => 'field_company',
+      '0' => 'field_eduglu_job_job_type',
       '1' => 'field_contact_name',
-      '2' => 'field_contact_email',
+      '2' => 'field_company',
       '3' => 'field_contact_phone_number',
+      '4' => 'field_contact_email',
     ),
   );
 
@@ -412,8 +494,12 @@ function _eduglu_job_board_strongarm() {
   $strongarm->value = array(
     'title' => '-5',
     'body_field' => '0',
+    'revision_information' => '20',
+    'comment_settings' => '30',
     'menu' => '2',
     'taxonomy' => '-4',
+    'book' => '10',
+    'path' => '30',
     'attachments' => '-3',
     'og_nodeapi' => '-2',
   );
