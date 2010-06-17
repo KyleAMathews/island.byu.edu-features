@@ -406,6 +406,110 @@ function _eduglu_job_board_menu_default_items() {
 }
 
 /**
+ * Helper to implementation of hook_user_default_permissions().
+ */
+function _eduglu_job_board_user_default_permissions() {
+  $permissions = array();
+
+  // Exported permission: edit field_company
+  $permissions[] = array(
+    'name' => 'edit field_company',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_contact_email
+  $permissions[] = array(
+    'name' => 'edit field_contact_email',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_contact_name
+  $permissions[] = array(
+    'name' => 'edit field_contact_name',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_contact_phone_number
+  $permissions[] = array(
+    'name' => 'edit field_contact_phone_number',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_eduglu_job_job_type
+  $permissions[] = array(
+    'name' => 'edit field_eduglu_job_job_type',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_company
+  $permissions[] = array(
+    'name' => 'view field_company',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_contact_email
+  $permissions[] = array(
+    'name' => 'view field_contact_email',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_contact_name
+  $permissions[] = array(
+    'name' => 'view field_contact_name',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_contact_phone_number
+  $permissions[] = array(
+    'name' => 'view field_contact_phone_number',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_eduglu_job_job_type
+  $permissions[] = array(
+    'name' => 'view field_eduglu_job_job_type',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  return $permissions;
+}
+
+/**
  * Helper to implementation of hook_strongarm().
  */
 function _eduglu_job_board_strongarm() {
