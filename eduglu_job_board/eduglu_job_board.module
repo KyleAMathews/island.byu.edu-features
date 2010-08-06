@@ -25,3 +25,50 @@ function eduglu_job_board_cron() {
   );
   variable_set('vertical_tabs_forms', $var);
 }
+
+/*
+ * Implementation of hook_menu().
+ */
+function eduglu_job_board_menu() {
+  $items['admin/settings/eduglu-job-board'] = array(
+    'title' => 'Job Board Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('eduglu_job_board_settings'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function eduglu_job_board_settings() {
+  $form = array();
+  $form['eduglu_job_board_recruiter_account'] = array(
+    '#type' => 'textfield', 
+    '#title' => t('Name of recruiter user account to redirect on login to a job board.'), 
+    '#description' => t('It\'s common on job boards to have a "recruiter" account you can give to companies who\'d like to post jobs. To ease that process for those people, you can set that account here to login to a certain page.'),
+    '#maxlength' => 60,
+    '#autocomplete_path' => 'user/autocomplete',
+    '#default_value' => variable_get('eduglu_job_board_recruiter_account', ''),
+    '#weight' => -1,
+  );
+  $form['eduglu_job_board_redirect_page'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Page to redirect the recruiter account to on login'),
+    '#default_value' => variable_get('eduglu_job_board_redirect_page', ''),
+  );
+
+  return system_settings_form($form);
+}
+
+/**
+ * Implmentation of hook_user
+ */
+function eduglu_job_board_user($op, $edit, $account) {
+  if ($op == login) {
+    if ($account->name == variable_get('eduglu_job_board_recruiter_account', '')
+    && $redirect = variable_get('eduglu_job_board_redirect_page', '')) { 
+      drupal_goto($redirect);
+    }
+  }
+}

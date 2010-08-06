@@ -44,3 +44,20 @@ function eduglu_job_board_update_6000() {
               WHERE nid = %d", $str, $datum['nid']);
   }
 }
+/**
+ * Add a deadline for each job already in the database 45 days in front of their posts date.
+ */
+function eduglu_job_board_update_6001() {
+  $results = db_query("SELECT n.nid, n.created 
+                        FROM {content_type_job_form} c 
+                        JOIN {node} n 
+                        ON c.nid = n.nid 
+                        WHERE c.field_eduglu_job_deadline_value is NULL");
+
+  while ($row = db_fetch_array($results)) {
+    $date = date("Y-m-d", $row['created'] + 3888000) . "T00:00:00";
+    db_query("UPDATE {content_type_job_form}
+              SET field_eduglu_job_deadline_value = '%s'
+              WHERE nid = %d", $date, $row['nid']);
+  }
+}

@@ -41,7 +41,7 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Company',
-      'weight' => '33',
+      'weight' => '40',
       'description' => 'Your company name',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -89,7 +89,7 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => '60',
       'label' => 'Contact Email',
-      'weight' => '35',
+      'weight' => '42',
       'description' => 'Your email address',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -131,7 +131,7 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Contact Name',
-      'weight' => '32',
+      'weight' => '39',
       'description' => 'Your name',
       'type' => 'text_textfield',
       'module' => 'text',
@@ -173,10 +173,148 @@ function _eduglu_job_board_content_default_fields() {
       'rows' => '1',
       'size' => 60,
       'label' => 'Contact Phone Number',
-      'weight' => '34',
+      'weight' => '41',
       'description' => 'Your phone number',
       'type' => 'text_textfield',
       'module' => 'text',
+    ),
+  );
+
+  // Exported field: field_eduglu_job_deadline
+  $fields[] = array(
+    'field_name' => 'field_eduglu_job_deadline',
+    'type_name' => 'job_form',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'date',
+    'required' => '1',
+    'multiple' => '0',
+    'module' => 'date',
+    'active' => '1',
+    'granularity' => array(
+      'year' => 'year',
+      'month' => 'month',
+      'day' => 'day',
+    ),
+    'timezone_db' => '',
+    'tz_handling' => 'none',
+    'todate' => '',
+    'repeat' => 0,
+    'repeat_collapsed' => '',
+    'default_format' => 'medium',
+    'widget' => array(
+      'default_value' => 'strtotime',
+      'default_value_code' => '+1month',
+      'default_value2' => 'same',
+      'default_value_code2' => '',
+      'input_format' => 'd.m.Y',
+      'input_format_custom' => '',
+      'increment' => '1',
+      'text_parts' => array(),
+      'year_range' => '-3:+3',
+      'label_position' => 'above',
+      'label' => 'Application Deadline',
+      'weight' => '36',
+      'description' => '',
+      'type' => 'date_popup',
+      'module' => 'date',
+    ),
+  );
+
+  // Exported field: field_eduglu_job_international
+  $fields[] = array(
+    'field_name' => 'field_eduglu_job_international',
+    'type_name' => 'job_form',
+    'display_settings' => array(
+      'label' => array(
+        'format' => 'above',
+        'exclude' => 0,
+      ),
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'text',
+    'required' => '1',
+    'multiple' => '0',
+    'module' => 'text',
+    'active' => '1',
+    'text_processing' => '0',
+    'max_length' => '',
+    'allowed_values' => 'yes|Yes
+no|No',
+    'allowed_values_php' => '',
+    'widget' => array(
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'International students',
+      'weight' => '38',
+      'description' => 'Can International Students apply to this job?',
+      'type' => 'optionwidgets_select',
+      'module' => 'optionwidgets',
     ),
   );
 
@@ -242,7 +380,7 @@ temp_consulting|Temporary Consulting
       ),
       'default_value_php' => NULL,
       'label' => 'Job Type',
-      'weight' => '31',
+      'weight' => '37',
       'description' => '',
       'type' => 'optionwidgets_select',
       'module' => 'optionwidgets',
@@ -251,10 +389,12 @@ temp_consulting|Temporary Consulting
 
   // Translatables
   array(
+    t('Application Deadline'),
     t('Company'),
     t('Contact Email'),
     t('Contact Name'),
     t('Contact Phone Number'),
+    t('International students'),
     t('Job Type'),
   );
 
@@ -324,25 +464,23 @@ function _eduglu_job_board_fieldgroup_default_groups() {
   $groups[] = array(
     'type_name' => 'job_form',
     'group_name' => 'group_job_contact_fields',
-    'label' => 'Job Contact Fields',
+    'label' => 'Job Fields',
     'settings' => array(
       'form' => array(
         'style' => 'fieldset',
         'description' => '',
       ),
       'display' => array(
-        'weight' => '-1',
-        'label' => 'hidden',
+        'description' => '',
+        '5' => array(
+          'format' => 'fieldset',
+          'exclude' => 0,
+        ),
         'teaser' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
         'full' => array(
-          'format' => 'fieldset',
-          'exclude' => 0,
-        ),
-        'description' => '',
-        '5' => array(
           'format' => 'fieldset',
           'exclude' => 0,
         ),
@@ -362,22 +500,25 @@ function _eduglu_job_board_fieldgroup_default_groups() {
           'format' => 'fieldset',
           'exclude' => 0,
         ),
+        'label' => 'hidden',
       ),
     ),
     'weight' => '-1',
     'group_type' => 'standard',
     'fields' => array(
-      '0' => 'field_eduglu_job_job_type',
-      '1' => 'field_contact_name',
-      '2' => 'field_company',
-      '3' => 'field_contact_phone_number',
-      '4' => 'field_contact_email',
+      '0' => 'field_eduglu_job_deadline',
+      '1' => 'field_eduglu_job_job_type',
+      '2' => 'field_eduglu_job_international',
+      '3' => 'field_contact_name',
+      '4' => 'field_company',
+      '5' => 'field_contact_phone_number',
+      '6' => 'field_contact_email',
     ),
   );
 
   // Translatables
   array(
-    t('Job Contact Fields'),
+    t('Job Fields'),
   );
 
   return $groups;
@@ -447,6 +588,22 @@ function _eduglu_job_board_user_default_permissions() {
     ),
   );
 
+  // Exported permission: edit field_eduglu_job_deadline
+  $permissions[] = array(
+    'name' => 'edit field_eduglu_job_deadline',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_eduglu_job_international
+  $permissions[] = array(
+    'name' => 'edit field_eduglu_job_international',
+    'roles' => array(
+      '0' => 'authenticated user',
+    ),
+  );
+
   // Exported permission: edit field_eduglu_job_job_type
   $permissions[] = array(
     'name' => 'edit field_eduglu_job_job_type',
@@ -489,6 +646,26 @@ function _eduglu_job_board_user_default_permissions() {
   // Exported permission: view field_contact_phone_number
   $permissions[] = array(
     'name' => 'view field_contact_phone_number',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_eduglu_job_deadline
+  $permissions[] = array(
+    'name' => 'view field_eduglu_job_deadline',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_eduglu_job_international
+  $permissions[] = array(
+    'name' => 'view field_eduglu_job_international',
     'roles' => array(
       '0' => 'admin',
       '1' => 'anonymous user',
@@ -599,6 +776,8 @@ function _eduglu_job_board_strongarm() {
     'title' => '-5',
     'body_field' => '0',
     'revision_information' => '20',
+    'author' => '20',
+    'options' => '25',
     'comment_settings' => '30',
     'menu' => '2',
     'taxonomy' => '-4',
