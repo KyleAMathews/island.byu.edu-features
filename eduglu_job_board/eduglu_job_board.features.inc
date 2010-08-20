@@ -1,82 +1,45 @@
 <?php
 
 /**
- * Implementation of hook_content_default_fields().
- */
-function eduglu_job_board_content_default_fields() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_content_default_fields', $args);
-}
-
-/**
- * Implementation of hook_context_default_contexts().
- */
-function eduglu_job_board_context_default_contexts() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_context_default_contexts', $args);
-}
-
-/**
  * Implementation of hook_ctools_plugin_api().
  */
 function eduglu_job_board_ctools_plugin_api() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_ctools_plugin_api', $args);
-}
-
-/**
- * Implementation of hook_fieldgroup_default_groups().
- */
-function eduglu_job_board_fieldgroup_default_groups() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_fieldgroup_default_groups', $args);
-}
-
-/**
- * Implementation of hook_menu_default_items().
- */
-function eduglu_job_board_menu_default_items() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_menu_default_items', $args);
+  list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => 3);
+  }
+  elseif ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => 1);
+  }
 }
 
 /**
  * Implementation of hook_node_info().
  */
 function eduglu_job_board_node_info() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.features.node');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_node_info', $args);
+  $items = array(
+    'job_form' => array(
+      'name' => t('Job Posting'),
+      'module' => 'features',
+      'description' => t('Submit a job posting with this form.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => t('To submit a new job submission, please fill in the form as best you can. All fields are required except for phone number. In the Title field, please enter the job title.
+
+When the job is filled, please indicate this by changing the job title to "Filled - " followed by the job title.'),
+    ),
+  );
+  return $items;
 }
 
 /**
- * Implementation of hook_user_default_permissions().
+ * Implementation of hook_views_api().
  */
-function eduglu_job_board_user_default_permissions() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_user_default_permissions', $args);
-}
-
-/**
- * Implementation of hook_strongarm().
- */
-function eduglu_job_board_strongarm() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.defaults');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_strongarm', $args);
-}
-
-/**
- * Implementation of hook_views_default_views().
- */
-function eduglu_job_board_views_default_views() {
-  module_load_include('inc', 'eduglu_job_board', 'eduglu_job_board.features.views');
-  $args = func_get_args();
-  return call_user_func_array('_eduglu_job_board_views_default_views', $args);
+function eduglu_job_board_views_api() {
+  return array(
+    'api' => '2',
+  );
 }

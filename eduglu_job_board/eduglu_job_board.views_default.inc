@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Helper to implementation of hook_views_default_views().
+ * Implementation of hook_views_default_views().
  */
-function _eduglu_job_board_views_default_views() {
+function eduglu_job_board_views_default_views() {
   $views = array();
 
   // Exported view: eduglu_job_board
@@ -419,6 +419,94 @@ function _eduglu_job_board_views_default_views() {
       ),
       'relationship' => 'none',
     ),
+    'body' => array(
+      'operator' => 'word',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'body_op',
+        'identifier' => 'body',
+        'label' => 'Search job descriptions',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'case' => 1,
+      'id' => 'body',
+      'table' => 'node_revisions',
+      'field' => 'body',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_company_value' => array(
+      'operator' => 'word',
+      'value' => '',
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'field_company_value_op',
+        'identifier' => 'field_company_value',
+        'label' => 'Company',
+        'optional' => 1,
+        'remember' => 0,
+      ),
+      'case' => 0,
+      'id' => 'field_company_value',
+      'table' => 'node_data_field_company',
+      'field' => 'field_company_value',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+    ),
+    'field_eduglu_job_international_value_many_to_one' => array(
+      'operator' => 'or',
+      'value' => array(),
+      'group' => '0',
+      'exposed' => TRUE,
+      'expose' => array(
+        'use_operator' => 0,
+        'operator' => 'field_eduglu_job_international_value_many_to_one_op',
+        'identifier' => 'field_eduglu_job_international_value_many_to_one',
+        'label' => 'International students?',
+        'optional' => 1,
+        'single' => 1,
+        'remember' => 0,
+        'reduce' => 0,
+      ),
+      'id' => 'field_eduglu_job_international_value_many_to_one',
+      'table' => 'node_data_field_eduglu_job_international',
+      'field' => 'field_eduglu_job_international_value_many_to_one',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
+    'field_eduglu_job_status_value_many_to_one' => array(
+      'operator' => 'not',
+      'value' => array(
+        'closed' => 'closed',
+      ),
+      'group' => '0',
+      'exposed' => FALSE,
+      'expose' => array(
+        'operator' => FALSE,
+        'label' => '',
+      ),
+      'id' => 'field_eduglu_job_status_value_many_to_one',
+      'table' => 'node_data_field_eduglu_job_status',
+      'field' => 'field_eduglu_job_status_value_many_to_one',
+      'override' => array(
+        'button' => 'Override',
+      ),
+      'relationship' => 'none',
+      'reduce_duplicates' => 0,
+    ),
   ));
   $handler->override_option('access', array(
     'type' => 'spaces_feature',
@@ -427,7 +515,7 @@ function _eduglu_job_board_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('header', '<h2>Jobs posted in last three months</h2>');
+  $handler->override_option('header', '<h2>Job Board </h2>');
   $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 0);
   $handler->override_option('items_per_page', 20);
