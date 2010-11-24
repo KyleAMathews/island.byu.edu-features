@@ -487,26 +487,6 @@ function eduglu_job_board_views_default_views() {
       'relationship' => 'none',
       'reduce_duplicates' => 0,
     ),
-    'field_eduglu_job_status_value_many_to_one' => array(
-      'operator' => 'not',
-      'value' => array(
-        'closed' => 'closed',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_eduglu_job_status_value_many_to_one',
-      'table' => 'node_data_field_eduglu_job_status',
-      'field' => 'field_eduglu_job_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
   ));
   $handler->override_option('access', array(
     'type' => 'spaces_feature',

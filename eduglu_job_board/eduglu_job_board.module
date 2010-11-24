@@ -65,10 +65,20 @@ function eduglu_job_board_settings() {
  * Implmentation of hook_user
  */
 function eduglu_job_board_user($op, $edit, $account) {
-  if ($op == login) {
+  if ($op == "login") {
     if ($account->name == variable_get('eduglu_job_board_recruiter_account', '')
     && $redirect = variable_get('eduglu_job_board_redirect_page', '')) { 
       drupal_goto($redirect);
     }
   }
+}
+
+/**
+ * Implementation of hook_theme_registry_alter().
+ *
+ * Tell the theme system to look in our module for node.tpl.php templates.
+ **/
+function eduglu_job_board_theme_registry_alter(&$theme_registry) {
+  $modulepath = drupal_get_path('module', 'eduglu_job_board');
+  array_unshift($theme_registry['node']['theme paths'], $modulepath);
 }
