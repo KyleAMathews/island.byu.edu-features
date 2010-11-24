@@ -4,6 +4,12 @@ include_once('eduglu_job_board.features.inc');
 // TODO write script to convert taxonomy data over + add variable_set in hook_cron?
 
 /**
+ * Implementation of hook_init().
+ */
+function eduglu_job_board_init() {
+  drupal_add_css(drupal_get_path('module', 'eduglu_job_board') . "/eduglu_job_board.css");
+}
+/**
  * Implementation of hook_cron().
  *
  * Set variable to tell vertical tabs not to tabify our cck fields + taxonomy

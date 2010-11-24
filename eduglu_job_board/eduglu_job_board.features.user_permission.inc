@@ -67,6 +67,24 @@ function eduglu_job_board_user_default_permissions() {
     ),
   );
 
+  // Exported permission: edit field_eduglu_job_salary
+  $permissions['edit field_eduglu_job_salary'] = array(
+    'name' => 'edit field_eduglu_job_salary',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: edit field_eduglu_job_status
+  $permissions['edit field_eduglu_job_status'] = array(
+    'name' => 'edit field_eduglu_job_status',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'authenticated user',
+    ),
+  );
+
   // Exported permission: view field_company
   $permissions['view field_company'] = array(
     'name' => 'view field_company',
@@ -130,6 +148,26 @@ function eduglu_job_board_user_default_permissions() {
   // Exported permission: view field_eduglu_job_job_type
   $permissions['view field_eduglu_job_job_type'] = array(
     'name' => 'view field_eduglu_job_job_type',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_eduglu_job_salary
+  $permissions['view field_eduglu_job_salary'] = array(
+    'name' => 'view field_eduglu_job_salary',
+    'roles' => array(
+      '0' => 'admin',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+    ),
+  );
+
+  // Exported permission: view field_eduglu_job_status
+  $permissions['view field_eduglu_job_status'] = array(
+    'name' => 'view field_eduglu_job_status',
     'roles' => array(
       '0' => 'admin',
       '1' => 'anonymous user',
