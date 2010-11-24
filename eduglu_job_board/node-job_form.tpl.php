@@ -16,15 +16,15 @@
 
   <div class="content grid-12 clear-block">
     <ul class="eduglu-job-info">
-      <li><strong>Job status:</strong> <?php print $field_eduglu_job_status[0]['view'] ?></li>
-      <li><strong>Application deadline:</strong> <?php print $field_eduglu_job_deadline[0]['view'] ?></li>
-      <li><strong>Job type:</strong> <?php print $field_eduglu_job_job_type[0]['view'] ?></li>
-      <li><strong>Salary range:</strong> <?php print $field_eduglu_job_salary[0]['view'] ?></li>
-      <li><strong>International students:</strong> <?php print $field_eduglu_job_international[0]['view'] ?></li>
-      <li><strong>Contact name:</strong> <?php print $field_contact_name[0]['view'] ?></li>
-      <li><strong>Company:</strong> <?php print $field_company[0]['view'] ?></li>
-      <li><strong>Contact phone number:</strong> <?php print $field_contact_phone_number[0]['view'] ?></li>
-      <li><strong>Contact email:</strong> <?php print $field_contact_email[0]['view'] ?></li>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Job status:</strong> <?php print $field_eduglu_job_status[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Application deadline:</strong> <?php print $field_eduglu_job_deadline[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Job type:</strong> <?php print $field_eduglu_job_job_type[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Salary range:</strong> <?php print $field_eduglu_job_salary[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>International students:</strong> <?php print $field_eduglu_job_international[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Contact name:</strong> <?php print $field_contact_name[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Company:</strong> <?php print $field_company[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Contact phone number:</strong> <?php print $field_contact_phone_number[0]['view'] ?></li><? endif; ?>
+      <?php if ($field_eduglu_job_status[0]['view']): ?><li><strong>Contact email:</strong> <?php print $field_contact_email[0]['view'] ?></li><? endif; ?>
     </ul>
     <?php print $node->content['body']['#value'] ?>
   </div>
